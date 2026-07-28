@@ -1,4 +1,4 @@
-name: Release Sausage Automsg
+name: Release Niko Automsg
 
 on:
   push:
@@ -25,22 +25,26 @@ jobs:
       - name: Update Project Version
         run: |
           # Nájde riadok "## Version: ..." a nahradí ho verziou z tagu
-          sed -i "s/^## Version: .*/## Version: ${{ env.VERSION }}/" SausageAutomsg.toc
-          sed -i "s/local SAUSAGE_VERSION = \".*\"/local SAUSAGE_VERSION = \"${{ env.VERSION }}\"/" SausageAutomsg.lua 
+          sed -i "s/^## Version: .*/## Version: ${{ env.VERSION }}/" NikoAutoMSG.toc
+          sed -i "s/local NIKO_VERSION = \".*\"/local NIKO_VERSION = \"${{ env.VERSION }}\"/" NikoAutoMSG.lua
           sed -i "s/\* \*\*Addon Version:\*\*.*/\* \*\*Addon Version:\*\* ${{ env.VERSION }}/" README.md
 
       - name: Commit and Push Version Update
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # -a pridá všetky zmenené súbory (fixuje chybu "no changes added to commit")
-          git commit -a -m "Bump version to ${{ env.VERSION }}"
-          # Pushneme explicitne do main vetvy (fixuje chybu "HEAD detached")
-          git push origin HEAD:main
+
+          # Commit iba ak sa nieco zmenilo (ak verzia uz sedi s tagom, nie je co commitnut)
+          if git diff --quiet; then
+            echo "Version already matches tag - nothing to commit."
+          else
+            git commit -a -m "Bump version to ${{ env.VERSION }}"
+            git push origin HEAD:main
+          fi
 
       - name: Prepare Release ZIP
         run: |
-          ADDON_NAME="SausageAutomsg"
+          ADDON_NAME="NikoAutoMSG"
           mkdir release_temp
           # Vytvoríme priečinok s názvom addonu (aby to po rozbalení malo správnu štruktúru pre WoW)
           mkdir release_temp/$ADDON_NAME
@@ -58,6 +62,6 @@ jobs:
         with:
           tag_name: ${{ env.VERSION }}
           name: Release ${{ env.VERSION }}
-          files: SausageAutomsg.zip
+          files: NikoAutoMSG.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

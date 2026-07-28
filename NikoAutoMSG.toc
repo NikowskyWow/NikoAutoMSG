@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: |cff33ff99Niko|r Automsg
+## Notes: Advanced auto-messaging utility. Minimap only. English localization.
+## Author: Nikowsky (Kokotiar / Jebly)
+## Version: NIKO_VERSION
+## SavedVariables: NikoAutoMSGDB, SausageAutomsgDB
+
+NikoAutoMSG.lua
