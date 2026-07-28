@@ -2,7 +2,7 @@
 -- Author: Nikowsky (Kokotiar / Jebly)
 -- Design System: Niko Addon Design System
 
-local NIKO_VERSION = "NIKO_VERSION"
+local NIKO_VERSION = "1.2.0"
 local ADDON_NAME = "NikoAutoMSG"
 
 -- Inicializácia globálnej tabuľky sa robí až v ADDON_LOADED,

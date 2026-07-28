@@ -49,7 +49,7 @@ Join our Discord for other addons, updates, bug reports, and suggestions:
 ---
 
 ## 📌 Technical Specifications
-* **Addon Version:** 1.1.1
+* **Addon Version:** 1.2.0
 * **Game Version:** World of Warcraft: Wrath of the Lich King (3.3.5a)
 * **Tested On:** Warmane (Onyxia Realm)
 * **Author:** Nikowsky (Kokotiar / Jebly)
