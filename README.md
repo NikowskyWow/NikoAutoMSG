@@ -4,6 +4,9 @@ An advanced auto-messaging utility that manages and broadcasts up to four indepe
 
 ---
 
+<img width="465" height="580" alt="NikoAutoMSG" src="https://github.com/user-attachments/assets/e0036c43-b50a-431f-bfc7-3fee59c8a994" />
+
+---
 ## 🚀 Features
 
 * **Multi-Slot System:** Manage up to 4 independent message profiles (Tabs) at once. Each slot has its own text, interval, and targeted channels.
@@ -53,5 +56,3 @@ Join our Discord for other addons, updates, bug reports, and suggestions:
 * **Game Version:** World of Warcraft: Wrath of the Lich King (3.3.5a)
 * **Tested On:** Warmane (Onyxia Realm)
 * **Author:** Nikowsky (Kokotiar / Jebly)
-
-<!-- SCREENSHOT: drag an image here in the GitHub web editor; it auto-uploads to a github.com/user-attachments URL. Then replace this comment with the generated ![NikoAutoMSG](...) block. -->
